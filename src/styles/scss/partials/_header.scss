@@ -119,6 +119,11 @@ header {
             
             &:hover {
                 text-decoration: underline;
+
+                div {
+                    background-color: #F1F1F1;
+                    color: #141414;
+                }
             }
         }
     }

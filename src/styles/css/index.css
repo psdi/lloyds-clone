@@ -91,5 +91,8 @@ header {
           color: #282F54; }
       header #bottom-nav a:hover {
         text-decoration: underline; }
+        header #bottom-nav a:hover div {
+          background-color: #F1F1F1;
+          color: #141414; }
 
 /*# sourceMappingURL=index.css.map */
