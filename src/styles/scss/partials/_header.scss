@@ -1,7 +1,12 @@
 header {
+    width: 980px; /* 72.5% */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+
     #top-nav {
-        width: 980px; /* 72.5% */
-        margin: 0 auto;
         display: flex;
         flex-direction: row;
         height: 38px;
@@ -79,6 +84,41 @@ header {
                     background-size: 20px;
                     background-position: left;
                 }
+            }
+        }
+    }
+
+    #bottom-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-top: 1px solid #282F54;
+        font-size: 9.5pt;
+        letter-spacing: -0.5px;
+        font-weight: bold;
+
+        a {
+            text-decoration: none;
+            width: 19.9%;
+            box-sizing: border-box;
+
+            div {
+                padding: 10px 15px;
+                text-align: center;
+
+                &.blurred {
+                    background-color: #282F54;
+                    color: #ffffff;
+                }
+
+                &.focused {
+                    background-color: #DFE0E6;
+                    color: #282F54;
+                }
+            }
+            
+            &:hover {
+                text-decoration: underline;
             }
         }
     }

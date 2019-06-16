@@ -4,64 +4,92 @@ body {
   margin: 0;
   padding: 0; }
 
-header #top-nav {
+header {
   width: 980px;
   /* 72.5% */
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  height: 38px;
-  box-sizing: border-box; }
-  header #top-nav #logo {
-    margin-top: -1px;
-    height: 39px; }
-  header #top-nav #links {
-    list-style-type: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px; }
+  header #top-nav {
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #D4D4D4;
-    margin: 0 0 0 14px;
-    padding: 0; }
-    header #top-nav #links li {
-      font-size: 9pt;
-      padding: 0 10px;
-      margin: auto 0;
-      height: 15px; }
-      header #top-nav #links li.right-line {
-        display: block;
-        border-right: 1px solid #CCC9CC; }
-      header #top-nav #links li a {
-        text-decoration: none;
-        color: #141414; }
-        header #top-nav #links li a:hover {
-          text-decoration: underline; }
-  header #top-nav #site-search {
-    margin: -1px 0 0 1px; }
-    header #top-nav #site-search form {
-      height: 39px;
+    flex-direction: row;
+    height: 38px;
+    box-sizing: border-box; }
+    header #top-nav #logo {
+      margin-top: -1px;
+      height: 39px; }
+    header #top-nav #links {
+      list-style-type: none;
       display: flex;
-      background-color: #F1F1F1;
-      border-bottom: 1px solid #282F54;
-      box-sizing: border-box; }
-      header #top-nav #site-search form input[type="text"], header #top-nav #site-search form #search-icon {
-        border: 0;
-        height: 100%; }
-      header #top-nav #site-search form input[type="text"] {
-        box-sizing: border-box;
+      justify-content: space-between;
+      border-bottom: 1px solid #D4D4D4;
+      margin: 0 0 0 14px;
+      padding: 0; }
+      header #top-nav #links li {
+        font-size: 9pt;
+        padding: 0 10px;
+        margin: auto 0;
+        height: 15px; }
+        header #top-nav #links li.right-line {
+          display: block;
+          border-right: 1px solid #CCC9CC; }
+        header #top-nav #links li a {
+          text-decoration: none;
+          color: #141414; }
+          header #top-nav #links li a:hover {
+            text-decoration: underline; }
+    header #top-nav #site-search {
+      margin: -1px 0 0 1px; }
+      header #top-nav #site-search form {
+        height: 39px;
+        display: flex;
         background-color: #F1F1F1;
-        color: #141414;
-        font-size: 10pt;
-        letter-spacing: -0.5px;
-        padding: 5px 11px;
-        width: 117px; }
-      header #top-nav #site-search form ::placeholder {
-        color: #707070;
-        opacity: 1; }
-      header #top-nav #site-search form #search-icon {
-        cursor: pointer;
-        min-width: 30px;
-        background: url("../../icons/search.png") no-repeat;
-        background-size: 20px;
-        background-position: left; }
+        border-bottom: 1px solid #282F54;
+        box-sizing: border-box; }
+        header #top-nav #site-search form input[type="text"], header #top-nav #site-search form #search-icon {
+          border: 0;
+          height: 100%; }
+        header #top-nav #site-search form input[type="text"] {
+          box-sizing: border-box;
+          background-color: #F1F1F1;
+          color: #141414;
+          font-size: 10pt;
+          letter-spacing: -0.5px;
+          padding: 5px 11px;
+          width: 117px; }
+        header #top-nav #site-search form ::placeholder {
+          color: #707070;
+          opacity: 1; }
+        header #top-nav #site-search form #search-icon {
+          cursor: pointer;
+          min-width: 30px;
+          background: url("../../icons/search.png") no-repeat;
+          background-size: 20px;
+          background-position: left; }
+  header #bottom-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #282F54;
+    font-size: 9.5pt;
+    letter-spacing: -0.5px;
+    font-weight: bold; }
+    header #bottom-nav a {
+      text-decoration: none;
+      width: 19.9%;
+      box-sizing: border-box; }
+      header #bottom-nav a div {
+        padding: 10px 15px;
+        text-align: center; }
+        header #bottom-nav a div.blurred {
+          background-color: #282F54;
+          color: #ffffff; }
+        header #bottom-nav a div.focused {
+          background-color: #DFE0E6;
+          color: #282F54; }
+      header #bottom-nav a:hover {
+        text-decoration: underline; }
 
 /*# sourceMappingURL=index.css.map */
