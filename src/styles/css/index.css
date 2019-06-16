@@ -83,10 +83,10 @@ header {
       header #bottom-nav a div {
         padding: 10px 15px;
         text-align: center; }
-        header #bottom-nav a div.blurred {
+        header #bottom-nav a div.inactive {
           background-color: #282F54;
           color: #ffffff; }
-        header #bottom-nav a div.focused {
+        header #bottom-nav a div.active {
           background-color: #DFE0E6;
           color: #282F54; }
       header #bottom-nav a:hover {

@@ -106,12 +106,12 @@ header {
                 padding: 10px 15px;
                 text-align: center;
 
-                &.blurred {
+                &.inactive {
                     background-color: #282F54;
                     color: #ffffff;
                 }
 
-                &.focused {
+                &.active {
                     background-color: #DFE0E6;
                     color: #282F54;
                 }
