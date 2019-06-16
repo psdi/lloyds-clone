@@ -51,18 +51,18 @@ header {
 
         #site-search {
             margin-top: -1px;
+            border-bottom: 1px solid #282F54;
             form {
                 height: 39px;
                 input[type="text"] {
                     border: 0;
-                    border-bottom: 1px solid #282F54;
                     box-sizing: border-box;
                     background-color: #F1F1F1;
                     color: #141414;
                     font-size: 10pt;
                     letter-spacing: -0.5px;
                     padding: 10px;
-                    height: 100%;
+                    height: calc(100% - 1px);
                     width: 100px;
                 }
 
