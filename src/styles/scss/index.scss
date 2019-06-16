@@ -1,24 +1,52 @@
 body {
     font-family: 'Noto Sans', sans-serif;
-    font-size: 11pt;
+    color: #141414;
     margin: 0;
     padding: 0;
 }
 
 header {
-    margin-top: 0;
     #top-nav {
-        padding-top: 0;
-        width: 73%;
+        width: 980px; /* 72.5% */
         margin: 0 auto;
         display: flex;
         flex-direction: row;
-        height: 39px;
+        height: 38px;
         box-sizing: border-box;
 
         #logo {
-            margin-top: 0;
+            margin-top: -1px;
             height: 39px;
+        }
+
+        #links {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #D4D4D4;
+            margin: 0 0 0 14px;
+            padding: 0;
+
+            li {
+                font-size: 9pt;
+                padding: 0 10px;
+                margin: auto 0;
+                height: 15px;
+
+                &.right-line {
+                    display: block;
+                    border-right: 1px solid #CCC9CC;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #141414;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
 }

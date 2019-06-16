@@ -1,21 +1,39 @@
 body {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 11pt;
+  color: #141414;
   margin: 0;
   padding: 0; }
 
-header {
-  margin-top: 0; }
-  header #top-nav {
-    padding-top: 0;
-    width: 73%;
-    margin: 0 auto;
+header #top-nav {
+  width: 980px;
+  /* 72.5% */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  height: 38px;
+  box-sizing: border-box; }
+  header #top-nav #logo {
+    margin-top: -1px;
+    height: 39px; }
+  header #top-nav #links {
+    list-style-type: none;
     display: flex;
-    flex-direction: row;
-    height: 39px;
-    box-sizing: border-box; }
-    header #top-nav #logo {
-      margin-top: 0;
-      height: 39px; }
+    justify-content: space-between;
+    border-bottom: 1px solid #D4D4D4;
+    margin: 0 0 0 14px;
+    padding: 0; }
+    header #top-nav #links li {
+      font-size: 9pt;
+      padding: 0 10px;
+      margin: auto 0;
+      height: 15px; }
+      header #top-nav #links li.right-line {
+        display: block;
+        border-right: 1px solid #CCC9CC; }
+      header #top-nav #links li a {
+        text-decoration: none;
+        color: #141414; }
+        header #top-nav #links li a:hover {
+          text-decoration: underline; }
 
 /*# sourceMappingURL=index.css.map */
