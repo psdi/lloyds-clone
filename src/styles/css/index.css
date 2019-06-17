@@ -124,9 +124,12 @@ footer {
     margin: 30px auto;
     display: flex;
     justify-content: flex-start; }
+    footer #media-icons a {
+      margin: 0 -6px; }
     footer #media-icons .icon {
-      height: 36px;
-      width: 36px; }
+      height: 35px;
+      width: 35px;
+      margin-right: 20px; }
     footer #media-icons .twitter-icon {
       background: url("../../icons/twitter.svg") no-repeat; }
     footer #media-icons .linkedin-icon {
