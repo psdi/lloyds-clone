@@ -1,0 +1,19 @@
+main {
+    section {
+        > * {
+            width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    #page-headline {
+        background-color: #F1F1F1;
+
+        #title-text {
+            color: #262626;
+            font-size: 23.5pt;
+            letter-spacing: -2px;
+        }
+    }
+}

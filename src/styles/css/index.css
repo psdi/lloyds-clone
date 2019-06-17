@@ -90,10 +90,22 @@ header {
           background-color: #DFE0E6;
           color: #282F54; }
       header #bottom-nav a:hover {
-        text-decoration: underline; }
+        text-decoration: underline;
+        text-decoration-color: #141414; }
         header #bottom-nav a:hover div {
           background-color: #F1F1F1;
           color: #141414; }
+
+main section > * {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto; }
+main #page-headline {
+  background-color: #F1F1F1; }
+  main #page-headline #title-text {
+    color: #262626;
+    font-size: 23.5pt;
+    letter-spacing: -2px; }
 
 footer {
   background-color: #141414;
