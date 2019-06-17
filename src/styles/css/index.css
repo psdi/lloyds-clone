@@ -95,4 +95,30 @@ header {
           background-color: #F1F1F1;
           color: #141414; }
 
+footer {
+  background-color: #141414;
+  color: #FAFAFA;
+  font-size: 10.25pt;
+  margin: 0;
+  padding: 30px 0 20px; }
+  footer > div {
+    width: 980px;
+    margin: 0 auto; }
+  footer #footer-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; }
+    footer #footer-links ul li {
+      padding-right: 8px;
+      height: 18px; }
+      footer #footer-links ul li.left-space {
+        padding-left: 8px;
+        border-left: 1px solid #FAFAFA; }
+      footer #footer-links ul li a {
+        color: #FAFAFA;
+        text-decoration: none; }
+        footer #footer-links ul li a:hover {
+          text-decoration: underline; }
+
 /*# sourceMappingURL=index.css.map */
