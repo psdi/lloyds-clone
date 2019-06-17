@@ -37,4 +37,31 @@ footer {
             }
         }
     }
+
+    #media-icons {
+        margin: 30px auto;
+        display: flex;
+        justify-content: flex-start;
+
+        .icon {
+            height: 36px;
+            width: 36px;
+        }
+
+        .twitter-icon {
+            background: url('../../icons/twitter.svg') no-repeat;
+        }
+
+        .linkedin-icon {
+            background: url('../../icons/linkedin.svg') no-repeat;
+        }
+
+        .facebook-icon {
+            background: url('../../icons/facebook.svg') no-repeat;
+        }
+
+        .youtube-icon {
+            background: url('../../icons/youtube.svg') no-repeat;
+        }
+    }
 }

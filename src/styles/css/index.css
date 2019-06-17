@@ -120,5 +120,20 @@ footer {
         text-decoration: none; }
         footer #footer-links ul li a:hover {
           text-decoration: underline; }
+  footer #media-icons {
+    margin: 30px auto;
+    display: flex;
+    justify-content: flex-start; }
+    footer #media-icons .icon {
+      height: 36px;
+      width: 36px; }
+    footer #media-icons .twitter-icon {
+      background: url("../../icons/twitter.svg") no-repeat; }
+    footer #media-icons .linkedin-icon {
+      background: url("../../icons/linkedin.svg") no-repeat; }
+    footer #media-icons .facebook-icon {
+      background: url("../../icons/facebook.svg") no-repeat; }
+    footer #media-icons .youtube-icon {
+      background: url("../../icons/youtube.svg") no-repeat; }
 
 /*# sourceMappingURL=index.css.map */
