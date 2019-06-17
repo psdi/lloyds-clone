@@ -102,10 +102,25 @@ main section > * {
   margin-right: auto; }
 main #page-headline {
   background-color: #F1F1F1; }
+  main #page-headline #level-links {
+    padding-top: 25px; }
+    main #page-headline #level-links span {
+      font-size: 11pt;
+      letter-spacing: -0.3px; }
+      main #page-headline #level-links span.level a {
+        color: #909090;
+        text-decoration: none; }
+      main #page-headline #level-links span.delimiter {
+        font-size: 10pt;
+        padding: 0 10px; }
   main #page-headline #title-text {
     color: #262626;
     font-size: 23.5pt;
     letter-spacing: -2px; }
+  main #page-headline #subtitle {
+    margin-top: -19px;
+    font-size: 10pt;
+    letter-spacing: -0.3px; }
 
 footer {
   background-color: #141414;

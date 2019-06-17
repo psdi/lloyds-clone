@@ -10,10 +10,37 @@ main {
     #page-headline {
         background-color: #F1F1F1;
 
+        #level-links {
+            padding-top: 25px;
+
+            span {
+                font-size: 11pt;
+                letter-spacing: -0.3px;
+
+                &.level {
+                    a {
+                        color: #909090;
+                        text-decoration: none;
+                    }
+                }
+
+                &.delimiter {
+                    font-size: 10pt;
+                    padding: 0 10px;
+                }
+            }
+        }
+
         #title-text {
             color: #262626;
             font-size: 23.5pt;
             letter-spacing: -2px;
+        }
+
+        #subtitle {
+            margin-top: -19px;
+            font-size: 10pt;
+            letter-spacing: -0.3px;
         }
     }
 }
