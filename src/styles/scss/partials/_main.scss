@@ -1,0 +1,131 @@
+main {
+    section {
+        > * {
+            width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    #page-headline {
+        background-color: #F1F1F1;
+
+        #level-links {
+            padding-top: 25px;
+
+            span {
+                font-size: 11pt;
+                letter-spacing: -0.3px;
+
+                &.level {
+                    a {
+                        color: #909090;
+                        text-decoration: none;
+                    }
+                }
+
+                &.delimiter {
+                    font-size: 10pt;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        #title-text {
+            color: #262626;
+            font-size: 23.5pt;
+            letter-spacing: -2px;
+        }
+
+        #subtitle {
+            margin-top: -19px;
+            font-size: 10pt;
+            letter-spacing: -0.3px;
+        }
+
+        #social-media {
+            padding-bottom: 20px;
+
+            #share-button {
+                display: flex;
+                height: 40px;
+                width: 150px;
+
+                > * {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+
+                #share-symbol {
+                    background: url('../../icons/icon-share-blue.svg') no-repeat;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 14px;
+                }
+
+                #share-text {
+                    color: #0C4AB5;
+                    font-size: 11.25pt;
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+            }
+
+            #media-icons {
+                display: none;
+            }
+        }
+    }
+
+    #page-text {
+        width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+
+        p {
+            font-size: 10.5pt;
+            letter-spacing: -0.2px;
+            line-height: 22px;
+        }
+
+        .report {
+            margin: 20px 0 45px;
+            display: flex;
+            flex-direction: row;
+            
+            .report-cover {
+                min-width: 207px;
+                margin: 20px 38px 20px 20px;
+                box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.8);
+            }
+
+            .description {
+                width: 585px;
+
+                h2 {
+                    letter-spacing: -1.6px;
+                    font-size: 17.5pt;
+                    min-height: 15px;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+
+                .no-margin {
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+
+                a {
+                    background-color: #0C4AB5;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    padding: 17px;
+                    display: inline-block;
+                    font-size: 10.75pt;
+                    letter-spacing: -0.5px;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+}

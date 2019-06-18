@@ -1,0 +1,10 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: #141414;
+    margin: 0;
+    padding: 0;
+}
+
+@import "partials/header.scss";
+@import "partials/main.scss";
+@import "partials/footer.scss";
