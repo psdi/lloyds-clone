@@ -172,14 +172,15 @@ main #page-text {
         padding: 17px;
         display: inline-block;
         font-size: 10.75pt;
-        letter-spacing: -0.5px; }
+        letter-spacing: -0.5px;
+        margin-top: -3px; }
 
 footer {
   background-color: #141414;
   color: #FAFAFA;
   font-size: 10.25pt;
   margin: 0;
-  padding: 30px 0 20px; }
+  padding: 25px 0 15px; }
   footer > div {
     width: 980px;
     margin: 0 auto; }
