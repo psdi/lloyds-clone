@@ -122,26 +122,65 @@ main #page-headline {
     font-size: 10pt;
     letter-spacing: -0.3px; }
   main #page-headline #social-media {
-    padding-bottom: 20px; }
+    padding-bottom: 5px; }
     main #page-headline #social-media #share-button {
       display: flex;
-      height: 40px;
-      width: 150px; }
-      main #page-headline #social-media #share-button > * {
-        margin-top: auto;
-        margin-bottom: auto; }
+      width: 150px;
+      cursor: pointer;
+      transition: all 0.1s; }
+      main #page-headline #social-media #share-button.dark {
+        background-color: #2B2B2B; }
+        main #page-headline #social-media #share-button.dark #share-symbol {
+          background: url("../../icons/icon-share-white.svg") no-repeat; }
+        main #page-headline #social-media #share-button.dark #share-text {
+          color: #ffffff; }
       main #page-headline #social-media #share-button #share-symbol {
         background: url("../../icons/icon-share-blue.svg") no-repeat;
-        height: 15px;
-        width: 15px;
-        margin-left: 14px; }
+        background-position: center;
+        background-size: 16px;
+        height: 16px;
+        width: 16px;
+        margin: 14px 0 1px 14px; }
       main #page-headline #social-media #share-button #share-text {
+        margin: 12px 0 3px;
         color: #0C4AB5;
         font-size: 11.25pt;
         font-weight: bold;
         margin-left: 10px; }
     main #page-headline #social-media #media-icons {
-      display: none; }
+      max-height: 50px;
+      transition: max-height 0.1s cubic-bezier(0, 1, 0.5, 1);
+      background-color: #2B2B2B;
+      margin-bottom: 35px;
+      padding: 10px 5px 1px 0;
+      display: inline-block; }
+      main #page-headline #social-media #media-icons.closed {
+        margin: 0;
+        padding: 0;
+        max-height: 0;
+        overflow-y: hidden; }
+      main #page-headline #social-media #media-icons #icon-container {
+        display: flex;
+        flex-direction: row;
+        height: 50px; }
+        main #page-headline #social-media #media-icons #icon-container a {
+          height: 35px;
+          width: 35px;
+          margin: 0 9px 0 0;
+          padding: 0;
+          display: inline-block; }
+          main #page-headline #social-media #media-icons #icon-container a div {
+            height: 35px;
+            width: 35px;
+            margin: 0 4.5px; }
+      main #page-headline #social-media #media-icons .twitter-icon {
+        background: url("../../icons/twitter.svg") no-repeat; }
+      main #page-headline #social-media #media-icons .linkedin-icon {
+        background: url("../../icons/linkedin.svg") no-repeat; }
+      main #page-headline #social-media #media-icons .facebook-icon {
+        background: url("../../icons/facebook.svg") no-repeat; }
+      main #page-headline #social-media #media-icons .mail-icon {
+        background: url("../../icons/email.svg") no-repeat; }
 main #page-text {
   width: 980px;
   margin-left: auto;
