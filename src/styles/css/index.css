@@ -122,27 +122,32 @@ main #page-headline {
     font-size: 10pt;
     letter-spacing: -0.3px; }
   main #page-headline #social-media {
-    padding-bottom: 20px; }
+    padding-bottom: 28px; }
     main #page-headline #social-media #share-button {
       display: flex;
-      height: 40px;
-      width: 150px; }
-      main #page-headline #social-media #share-button > * {
-        margin-top: auto;
-        margin-bottom: auto; }
+      width: 150px;
+      cursor: pointer; }
+      main #page-headline #social-media #share-button.dark {
+        background-color: #262626;
+        color: #ffffff; }
       main #page-headline #social-media #share-button #share-symbol {
         background: url("../../icons/icon-share-blue.svg") no-repeat;
-        height: 15px;
-        width: 15px;
-        margin-left: 14px; }
+        background-position: center;
+        background-size: 16px;
+        height: 16px;
+        width: 16px;
+        margin: 14px 0 1px 14px; }
       main #page-headline #social-media #share-button #share-text {
+        margin: 12px 0 3px;
         color: #0C4AB5;
         font-size: 11.25pt;
         font-weight: bold;
         margin-left: 10px; }
     main #page-headline #social-media #media-icons {
       display: none;
-      padding-top: 3px; }
+      padding: 10px 5px 1px 0;
+      margin-bottom: 15px;
+      background-color: #262626; }
       main #page-headline #social-media #media-icons #icon-container {
         display: flex;
         flex-direction: row;
@@ -150,7 +155,7 @@ main #page-headline {
         main #page-headline #social-media #media-icons #icon-container div {
           height: 35px;
           width: 35px;
-          margin: 0 4px; }
+          margin: 0 4.5px; }
       main #page-headline #social-media #media-icons .twitter-icon {
         background: url("../../icons/twitter.svg") no-repeat; }
       main #page-headline #social-media #media-icons .linkedin-icon {
