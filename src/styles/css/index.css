@@ -141,7 +141,24 @@ main #page-headline {
         font-weight: bold;
         margin-left: 10px; }
     main #page-headline #social-media #media-icons {
-      display: none; }
+      display: none;
+      padding-top: 3px; }
+      main #page-headline #social-media #media-icons #icon-container {
+        display: flex;
+        flex-direction: row;
+        height: 50px; }
+        main #page-headline #social-media #media-icons #icon-container div {
+          height: 35px;
+          width: 35px;
+          margin: 0 4px; }
+      main #page-headline #social-media #media-icons .twitter-icon {
+        background: url("../../icons/twitter.svg") no-repeat; }
+      main #page-headline #social-media #media-icons .linkedin-icon {
+        background: url("../../icons/linkedin.svg") no-repeat; }
+      main #page-headline #social-media #media-icons .facebook-icon {
+        background: url("../../icons/facebook.svg") no-repeat; }
+      main #page-headline #social-media #media-icons .mail-icon {
+        background: url("../../icons/email.svg") no-repeat; }
 main #page-text {
   width: 980px;
   margin-left: auto;

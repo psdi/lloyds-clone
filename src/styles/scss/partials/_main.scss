@@ -73,6 +73,35 @@ main {
 
             #media-icons {
                 display: none;
+                padding-top: 3px;
+
+                #icon-container {
+                    display: flex;
+                    flex-direction: row;
+                    height: 50px;
+
+                    div {
+                        height: 35px;
+                        width: 35px;
+                        margin: 0 4px;
+                    }
+                }
+
+                .twitter-icon {
+                    background: url("../../icons/twitter.svg") no-repeat;
+                }
+
+                .linkedin-icon {
+                    background: url("../../icons/linkedin.svg") no-repeat;
+                }
+
+                .facebook-icon {
+                    background: url("../../icons/facebook.svg") no-repeat;
+                }
+
+                .mail-icon {
+                    background: url("../../icons/email.svg") no-repeat;
+                }
             }
         }
     }
