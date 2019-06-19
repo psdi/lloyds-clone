@@ -44,16 +44,24 @@ main {
         }
 
         #social-media {
-            padding-bottom: 28px;
+            padding-bottom: 5px;
 
             #share-button {
                 display: flex;
                 width: 150px;
                 cursor: pointer;
+                transition: all 0.1s;
 
                 &.dark {
-                    background-color: #262626;
-                    color: #ffffff;
+                    background-color: #2B2B2B;
+
+                    #share-symbol {
+                        background: url('../../icons/icon-share-white.svg') no-repeat;
+                    }
+
+                    #share-text {
+                        color: #ffffff;
+                    }
                 }
 
                 #share-symbol {
@@ -75,20 +83,37 @@ main {
             }
 
             #media-icons {
-                display: none;
+                max-height: 50px;
+                transition: max-height 0.1s cubic-bezier(0, 1, 0.5, 1);
+                background-color: #2B2B2B;
+                margin-bottom: 35px;
                 padding: 10px 5px 1px 0;
-                margin-bottom: 15px;
-                background-color: #262626;
+                display: inline-block;
+
+                &.closed {
+                    margin: 0;
+                    padding: 0;
+                    max-height: 0;
+                    overflow-y: hidden;
+                }
 
                 #icon-container {
                     display: flex;
                     flex-direction: row;
                     height: 50px;
 
-                    div {
+                    a {
                         height: 35px;
                         width: 35px;
-                        margin: 0 4.5px;
+                        margin: 0 9px 0 0;
+                        padding: 0;
+                        display: inline-block;
+
+                        div {
+                            height: 35px;
+                            width: 35px;
+                            margin: 0 4.5px;
+                        }
                     }
                 }
 
@@ -126,7 +151,7 @@ main {
             margin: 20px 0 45px;
             display: flex;
             flex-direction: row;
-            
+
             .report-cover {
                 min-width: 207px;
                 margin: 20px 38px 20px 20px;
