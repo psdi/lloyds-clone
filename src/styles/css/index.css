@@ -86,9 +86,6 @@ header {
         width: 100%;
         padding: 10px 0;
         text-align: center; }
-        header #bottom-nav div > a:hover {
-          text-decoration: underline;
-          color: #141414; }
       header #bottom-nav div.inactive {
         background-color: #282F54; }
         header #bottom-nav div.inactive a {
@@ -97,20 +94,24 @@ header {
         background-color: #DFE0E6; }
         header #bottom-nav div.active a {
           color: #282F54; }
-      header #bottom-nav div:hover {
+      header #bottom-nav div:hover > a {
+        text-decoration: underline;
         text-decoration-color: #141414;
         background-color: #F1F1F1; }
+      header #bottom-nav div:hover > .sub-menu {
+        display: block; }
       header #bottom-nav div .sub-menu {
+        display: none;
         box-sizing: border-box;
         width: 980px;
         position: absolute;
         top: 100px;
         background-color: #F1F1F1;
         box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.8);
-        padding: 15px 30px; }
+        padding: 20px 30px; }
         header #bottom-nav div .sub-menu h4 {
           padding: 0 0 15px;
-          margin: 0 0 25px;
+          margin: 0 0 15px;
           border-bottom: 1px solid black; }
         header #bottom-nav div .sub-menu ul {
           list-style: none;
@@ -118,8 +119,14 @@ header {
           font-weight: normal;
           padding: 0;
           margin: 0; }
-          header #bottom-nav div .sub-menu ul li a {
-            text-align: left; }
+          header #bottom-nav div .sub-menu ul li {
+            padding: 9px 0;
+            font-size: 11pt; }
+            header #bottom-nav div .sub-menu ul li a {
+              text-align: left;
+              display: block; }
+              header #bottom-nav div .sub-menu ul li a:hover {
+                text-decoration: underline; }
         header #bottom-nav div .sub-menu.wrap ul {
           flex-wrap: wrap; }
           header #bottom-nav div .sub-menu.wrap ul li {
