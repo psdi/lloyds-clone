@@ -193,8 +193,34 @@ header {
                 &.column {
                     ul {
                         flex-direction: column;
+                        
                         li {
-                            width: 100%;
+                            width: 25%;
+
+                            &:hover {
+                                .third-level-menu {
+                                   display: block;
+                                }
+                            }
+
+                            .third-level-menu {
+                                display: none;
+                                position: absolute;
+                                left: 25%;
+                                top: 69px;
+                                width: 70%;
+                                height: 100%;
+
+                                ul {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    flex-direction: row;
+
+                                    li {
+                                        width: 25%;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
