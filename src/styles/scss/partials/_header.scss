@@ -170,10 +170,8 @@ header {
                         a {
                             text-align: left;
                             display: block;
-
-                            &:hover {
-                                text-decoration: underline;
-                            }
+                            color: #141414;
+                            text-decoration: none;
                         }
                     }
                 }
@@ -183,6 +181,11 @@ header {
                         flex-wrap: wrap;
                         li {
                             width: 33%;
+                            a {
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
                         }
                     }
                 }

@@ -128,13 +128,15 @@ header {
             font-size: 11pt; }
             header #bottom-nav div .sub-menu ul li a {
               text-align: left;
-              display: block; }
-              header #bottom-nav div .sub-menu ul li a:hover {
-                text-decoration: underline; }
+              display: block;
+              color: #141414;
+              text-decoration: none; }
         header #bottom-nav div .sub-menu.wrap ul {
           flex-wrap: wrap; }
           header #bottom-nav div .sub-menu.wrap ul li {
             width: 33%; }
+            header #bottom-nav div .sub-menu.wrap ul li a:hover {
+              text-decoration: underline; }
         header #bottom-nav div .sub-menu.column ul {
           flex-direction: column; }
           header #bottom-nav div .sub-menu.column ul li {
