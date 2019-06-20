@@ -156,6 +156,8 @@ header {
                 flex-direction: row; }
                 header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li {
                   width: 25%; }
+                  header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li a:hover {
+                    text-decoration: underline; }
 
 main section > * {
   width: 980px;

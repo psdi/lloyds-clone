@@ -218,6 +218,12 @@ header {
 
                                     li {
                                         width: 25%;
+
+                                        a {
+                                            &:hover {
+                                                text-decoration: underline;
+                                            }
+                                        }
                                     }
                                 }
                             }
