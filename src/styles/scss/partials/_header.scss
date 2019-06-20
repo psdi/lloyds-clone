@@ -96,34 +96,139 @@ header {
         font-size: 9.5pt;
         letter-spacing: -0.5px;
         font-weight: bold;
+        height: 38px;
 
-        a {
-            text-decoration: none;
+        div {
             width: 19.9%;
-            box-sizing: border-box;
 
-            div {
-                padding: 10px 15px;
+            & > a {
+                text-decoration: none;
+                display: block;
+                height: 100%;
+                width: 100%;
+                padding: 10px 0;
                 text-align: center;
+            }
 
-                &.inactive {
-                    background-color: #282F54;
+            &.inactive {
+                background-color: #282F54;
+                & > a {
                     color: #ffffff;
                 }
+            }
 
-                &.active {
-                    background-color: #DFE0E6;
+            &.active {
+                background-color: #DFE0E6;
+                & > a {
                     color: #282F54;
                 }
             }
-            
-            &:hover {
-                text-decoration: underline;
-                text-decoration-color: #141414;
 
-                div {
+            &:hover {
+                & > a {
+                    text-decoration: underline;
+                    color: #282F54;
+                    text-decoration-color: #141414;
                     background-color: #F1F1F1;
-                    color: #141414;
+                }
+
+                & > .sub-menu {
+                    display: block;
+                }
+            }
+
+            .sub-menu {
+                display: none;
+                box-sizing: border-box;
+                width: 980px;
+                position: absolute;
+                top: 100px;
+                left: calc((100% - 980px) / 2);
+                background-color: #F1F1F1;
+                box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.8);
+                padding: 20px 30px;
+                margin-left: auto;
+                margin-right: auto;
+
+                h4 {
+                    padding: 0 0 15px;
+                    margin: 0 0 15px;
+                    border-bottom: 1px solid black;
+                }
+    
+                ul {
+                    list-style: none;
+                    display: flex;
+                    font-weight: normal;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        padding: 9px 0;
+                        font-size: 11pt;
+
+                        a {
+                            text-align: left;
+                            display: block;
+                            color: #141414;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                &.wrap {
+                    ul {
+                        flex-wrap: wrap;
+                        li {
+                            width: 33%;
+                            a {
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.column {
+                    ul {
+                        flex-direction: column;
+                        
+                        li {
+                            width: 25%;
+
+                            &:hover {
+                                .third-level-menu {
+                                   display: block;
+                                }
+                            }
+
+                            .third-level-menu {
+                                display: none;
+                                position: absolute;
+                                left: 25%;
+                                top: 69px;
+                                width: 70%;
+                                height: 100%;
+
+                                ul {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    flex-direction: row;
+
+                                    li {
+                                        width: 25%;
+
+                                        a {
+                                            &:hover {
+                                                text-decoration: underline;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
