@@ -3,13 +3,12 @@ header {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
     height: 100px;
     flex-wrap: wrap;
+    box-sizing: border-box;
 
     #icon-container {
-        flex: 1 0 10%;
-
         #logo {
             margin-top: -1px;
             height: 39px;
@@ -17,24 +16,23 @@ header {
     }
 
     #top-nav {
+        flex-basis: 75.2%;
         height: 38px;
         box-sizing: border-box;
-        padding: 18px 0;
-        border-bottom: 1px solid #D4D4D4;
-        flex: 1 0 75%;
 
         #links {
             list-style-type: none;
             display: flex;
             justify-content: space-between;
             margin: 0 0 0 14px;
-            padding: 0;
+            border-bottom: 1px solid #D4D4D4;
+            padding: 11px 0 11px 9px;
 
             li {
                 font-size: 9pt;
-                padding: 0 10px;
-                margin: auto 0;
+                padding: 0 8px;
                 height: 15px;
+                letter-spacing: -0.2px;
 
                 &.right-line {
                     display: block;
@@ -55,7 +53,7 @@ header {
 
     #site-search {
         margin: -1px 0 0 1px;
-        flex: 1 0 15%;
+        flex-basis: 15%;
 
         form {
             height: 39px;
@@ -86,7 +84,7 @@ header {
 
             #search-icon {
                 cursor: pointer;
-                min-width: 30px;
+                min-width: 20%;
                 background: url('../../icons/search.png') no-repeat;
                 background-size: 20px;
                 background-position: left;
@@ -104,7 +102,7 @@ header {
         font-weight: bold;
         height: 38px;
         flex-basis: 100%;
-
+        margin-top: 19px;
 
         div {
             width: 19.9%;
