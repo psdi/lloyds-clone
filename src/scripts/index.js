@@ -8,4 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
         icons.classList.toggle('closed');
         shareBtn.classList.toggle('dark');
     });
+
+    const searchBtn = document.querySelector('#search-btn');
+    const siteSearch = document.querySelector('#site-search');
+
+    searchBtn.addEventListener('click', function() {
+        siteSearch.classList.toggle('closed');
+    });
 });

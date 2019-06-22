@@ -25,7 +25,8 @@ header {
       width: 15px;
       height: 25px;
       padding: 0 5px;
-      margin: 5px; }
+      margin: 5px;
+      cursor: pointer; }
       header #icon-container #symbol-group a#login-btn {
         background: url("../../icons/login.png") no-repeat;
         background-position: top; }
@@ -78,7 +79,7 @@ header {
         font-size: 10pt;
         letter-spacing: -0.5px;
         padding: 5px 11px;
-        width: 117px; }
+        width: 80%; }
       header #site-search form ::placeholder {
         color: #707070;
         opacity: 1; }
@@ -194,7 +195,23 @@ header {
       header #icon-container #symbol-group {
         display: block; }
     header #site-search {
-      flex-basis: 100%; } }
+      flex-basis: 100%;
+      max-height: 50px;
+      transition: max-height 0.8s cubic-bezier(0, 1, 0.5, 1); }
+      header #site-search.closed {
+        max-height: 0;
+        overflow-y: hidden;
+        padding: 0;
+        margin: 0; }
+      header #site-search form {
+        height: 50px; }
+        header #site-search form input[type="text"] {
+          font-size: 13pt;
+          width: calc(100% - 50px); }
+        header #site-search form #search-icon {
+          min-width: 50px;
+          background-position: center;
+          background-size: 27px; } }
 main section > * {
   width: 980px;
   margin-left: auto;

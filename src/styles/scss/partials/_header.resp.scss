@@ -20,6 +20,30 @@
 
         #site-search {
             flex-basis: 100%;
+            max-height: 50px;
+            transition: max-height 0.8s cubic-bezier(0, 1, 0.5, 1);
+
+            &.closed {
+                max-height: 0;
+                overflow-y: hidden;
+                padding: 0;
+                margin: 0;
+            }
+
+            form {
+                height: 50px;
+    
+                input[type="text"] {
+                    font-size: 13pt;
+                    width: calc(100% - 50px);
+                }
+            
+                #search-icon {
+                    min-width: 50px;
+                    background-position: center;
+                    background-size: 27px;
+                }
+            }
         }
     }
 } 

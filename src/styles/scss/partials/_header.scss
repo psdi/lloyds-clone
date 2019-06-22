@@ -25,6 +25,7 @@ header {
                 height: 25px;
                 padding: 0 5px;
                 margin: 5px;
+                cursor: pointer;
 
                 &#login-btn {
                     background: url("../../icons/login.png") no-repeat;
@@ -104,7 +105,7 @@ header {
                 font-size: 10pt;
                 letter-spacing: -0.5px;
                 padding: 5px 11px;
-                width: 117px;
+                width: 80%;
             }
 
             ::placeholder {
