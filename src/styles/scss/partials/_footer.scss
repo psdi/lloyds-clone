@@ -4,8 +4,9 @@ footer {
     font-size: 10.25pt;
     margin: 0;
     padding: 25px 0 15px;
+    letter-spacing: 0.1px;
 
-    > div {
+    & > div {
         width: 980px;
         margin: 0 auto;
     }
@@ -21,9 +22,13 @@ footer {
                 padding-right: 8px;
                 height: 18px;
 
+                &.right-line {
+                    padding-right: 8px;
+                    border-right: 1px solid #FAFAFA;
+                }
+
                 &.left-space {
                     padding-left: 8px;
-                    border-left: 1px solid #FAFAFA;
                 }
 
                 a {
@@ -45,12 +50,13 @@ footer {
 
         a {
             margin: 0 -6px;
+            padding: 0;
         }
 
         .icon {
             height: 35px;
             width: 35px;
-            margin-right: 20px;
+            margin-right: 15px;
         }
 
         .twitter-icon {

@@ -1,0 +1,43 @@
+@media only screen and (max-width: 1024px) {
+    footer {
+        box-sizing: border-box;
+        position: relative;
+        padding: 30px 15px 5px;
+
+        & > div {
+            margin: 0;
+            width: 100%;
+            min-height: 2em;
+            text-align: left;
+        }
+
+        #footer-links {
+            ul {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 459px) {
+    footer {
+        #footer-links {
+            ul {
+                flex-wrap: nowrap;
+                flex-direction: column;
+
+                li {
+                    &.right-line {
+                        border-right: 0;
+                        padding: 0;
+                    }
+
+                    &.left-space {
+                        margin-top: 10px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
