@@ -85,7 +85,6 @@ header {
       header #bottom-nav div > a {
         text-decoration: none;
         display: block;
-        height: 100%;
         width: 100%;
         padding: 10px 0;
         text-align: center; }
