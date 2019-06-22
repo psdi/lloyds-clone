@@ -13,6 +13,36 @@ header {
             margin-top: -1px;
             height: 39px;
         }
+
+        #symbol-group {
+            display: none;
+            margin: auto 0;
+            padding: 0 0 auto;
+
+            a {
+                display: inline-block;
+                width: 15px;
+                height: 25px;
+                padding: 0 5px;
+                margin: 5px;
+
+                &#login-btn {
+                    background: url("../../icons/login.png") no-repeat;
+                    background-position: top;
+                }
+
+                &#search-btn {
+                    background: url("../../icons/search.png") no-repeat;
+                    background-position: top;
+                }
+
+                &#menu-btn {
+                    background: url("../../icons/burger.svg") no-repeat;
+                    background-size: 30px;
+                }
+
+            }
+        }
     }
 
     #top-nav {

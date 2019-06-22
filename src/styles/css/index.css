@@ -16,6 +16,25 @@ header {
   header #icon-container #logo {
     margin-top: -1px;
     height: 39px; }
+  header #icon-container #symbol-group {
+    display: none;
+    margin: auto 0;
+    padding: 0 0 auto; }
+    header #icon-container #symbol-group a {
+      display: inline-block;
+      width: 15px;
+      height: 25px;
+      padding: 0 5px;
+      margin: 5px; }
+      header #icon-container #symbol-group a#login-btn {
+        background: url("../../icons/login.png") no-repeat;
+        background-position: top; }
+      header #icon-container #symbol-group a#search-btn {
+        background: url("../../icons/search.png") no-repeat;
+        background-position: top; }
+      header #icon-container #symbol-group a#menu-btn {
+        background: url("../../icons/burger.svg") no-repeat;
+        background-size: 30px; }
   header #top-nav {
     flex-basis: 75.2%;
     height: 38px;
@@ -161,6 +180,21 @@ header {
                   header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li a:hover {
                     text-decoration: underline; }
 
+@media only screen and (max-width: 1020px) {
+  header {
+    width: 100%;
+    box-sizing: border-box; }
+    header > div {
+      box-sizing: border-box; }
+    header #icon-container {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 14px; }
+      header #icon-container #symbol-group {
+        display: block; }
+    header #site-search {
+      flex-basis: 100%; } }
 main section > * {
   width: 980px;
   margin-left: auto;
