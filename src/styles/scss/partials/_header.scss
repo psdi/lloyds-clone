@@ -4,7 +4,7 @@ header {
     display: flex;
     flex-direction: row;
     // justify-content: space-between;
-    height: 100px;
+    min-height: 100px;
     flex-wrap: wrap;
     box-sizing: border-box;
 
@@ -48,21 +48,21 @@ header {
 
     #top-nav {
         flex-basis: 75.2%;
-        height: 38px;
+        min-height: 38px;
         box-sizing: border-box;
 
         #links {
             list-style-type: none;
             display: flex;
             justify-content: space-between;
-            margin: 0 0 0 14px;
+            margin: -2px 0 0 14px;
             border-bottom: 1px solid #D4D4D4;
             padding: 11px 0 11px 9px;
 
             li {
                 font-size: 9pt;
                 padding: 0 8px;
-                height: 15px;
+                min-height: 15px;
                 letter-spacing: -0.2px;
 
                 &.right-line {

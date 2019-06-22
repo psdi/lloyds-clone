@@ -1,10 +1,12 @@
 @media only screen and (max-width: 1020px) {
     header {
         width: 100%;
+        min-height: 100px;
         box-sizing: border-box;
 
-        & > div {
+        & > * {
             box-sizing: border-box;
+            flex-basis: 100%;
         }
 
         #icon-container {
@@ -44,6 +46,45 @@
                     background-size: 27px;
                 }
             }
+        }
+
+        #top-nav {
+            flex-basis: 100%;
+            min-height: 100px;
+            display: inline-block;
+            
+            #links {
+                padding: 0;
+                margin: 0;
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                    display: block;
+
+                    a {
+                        display: block;
+                        padding: 10px;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 10.5pt;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    &.right-line {
+                        border-right: 0;
+                        border-bottom: 1px solid #CCC9CC;
+                    }
+                }
+            }
+        }
+
+        #bottom-nav {
+            flex-basis: 100%;
+            display: none; //temporary
         }
     }
 } 
