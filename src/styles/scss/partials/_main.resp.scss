@@ -1,10 +1,13 @@
 @media only screen and (max-width: 1020px) {
     main {
         width: 100%;
+        box-sizing: border-box;
 
-        & > * {
-            width: 100vw;
-            padding: 0 10px;
+        section {
+            > * {
+                box-sizing: border-box;
+                width: 100%;
+            }
         }
 
         #page-headline {
@@ -15,13 +18,56 @@
                 margin-left: 0;
                 margin-right: auto;
             }
-        }        
-    }
-
-    footer {
-        width: 100%;
-        & > * {
+        }
+        
+        #page-text {
+            padding: 0 15px;
             width: 100%;
+            box-sizing: border-box;
+
+            p {
+                width: 100%;
+            }
+
+            .report {
+                .report-cover {
+                    margin-left: 0;
+                    width: 25%;
+                }
+
+                .description {
+                    width: 70%;
+
+                    h2 {
+                        padding-right: 10px;
+                    }
+                }
+            }
         }
     }
-} 
+}
+
+@media only screen and (max-width: 740px) {
+    main {
+        #page-text {
+            .report {
+                .report-cover {
+                    display: none;
+                }
+                .description {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    main {
+        #page-text {
+            h2 {
+                font-size: 13pt !important;
+            }
+        }
+    }
+}
