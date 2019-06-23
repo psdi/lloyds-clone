@@ -5,6 +5,9 @@ body {
     padding: 0;
 }
 
-@import "partials/header.scss";
-@import "partials/main.scss";
-@import "partials/footer.scss";
+@import "partials/header";
+@import "partials/header.resp";
+@import "partials/main";
+@import "partials/main.resp";
+@import "partials/footer";
+@import "partials/footer.resp";

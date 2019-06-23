@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="node_modules/underscore/underscore.js"></script>
     <script src="src/scripts/index.js"></script>
+    <script src="src/scripts/responsive.js"></script>
     
     <link rel="shortcut icon" type="image/png" href="src/icons/favicon.ico"/>
 
@@ -19,10 +21,17 @@
 </head>
 <body>
     <header>
-        <nav id="top-nav">
+        <div id="icon-container">
             <a href="https://www.lloyds.com/">
-            <img id="logo" src="src/images/Lloyds_of_London_logo_black.svg" />
+                <img id="logo" src="src/images/Lloyds_of_London_logo_black.svg" />
             </a>
+            <div id="symbol-group">
+                <a href="https://www.lloyds.com/Account/Login" id="login-btn"></a>
+                <a id="search-btn"></a>
+                <a id="menu-btn"></a>
+            </div>
+        </div>
+        <nav id="top-nav">
             <ul id="links">
                 <li class="right-line">
                     <a href="https://www.lloyds.com/about-lloyds">About</a>
@@ -52,19 +61,20 @@
                     <a href="https://www.lloyds.com/Account/Login">Login/register</a>
                 </li>
             </ul>
-            <div id="site-search">
-                <form action="https://www.lloyds.com/Search">
-                    <input type="text" placeholder="Search" name="q" autocomplete="off" />
-                    <button id="search-icon"></button> 
-                </form>
-            </div>
         </nav>
+        <div id="site-search" class="closed">
+            <form action="https://www.lloyds.com/Search">
+                <input type="text" placeholder="Search" name="q" autocomplete="off" />
+                <button id="search-icon"></button> 
+            </form>
+        </div>
         <nav id="bottom-nav">
             <div class="active">
-                <a href="https://www.lloyds.com/news-and-risk-insight">
+                <a href="https://www.lloyds.com/news-and-risk-insight" class="right-line">
                     News and risk insight
                 </a>
-                <div class="sub-menu wrap">
+                <button class="expand bottom-line">+</button>
+                <div class="sub-menu wrap hidden">
                     <h4>News and risk insight</h4>
                     <ul>
                         <li><a href="https://www.lloyds.com/news-and-risk-insight/press-releases">Press releases</a></li>
@@ -81,10 +91,11 @@
                 </div>
             </div>
             <div class="inactive">
-                <a href="https://www.lloyds.com/market-directory" class="inactive">
+                <a href="https://www.lloyds.com/market-directory" class="right-line">
                     Market directory
                 </a>
-                <div class="sub-menu wrap">
+                <button class="expand bottom-line">+</button>
+                <div class="sub-menu wrap hidden">
                     <h4>Market directory</h4>
                     <ul>
                         <li><a href="https://www.lloyds.com/the-market/directories/results?mode=bro&cobc=0&cob=&bro_num=&pseudo=&name=&loc=&bro=1&cov=0&man=0&mem=0&omc=0&run=0">Brokers</a></li>
@@ -98,10 +109,11 @@
                 </div>
             </div>
             <div class="inactive">
-                <a href="https://www.lloyds.com/market-resources" class="inactive">
+                <a href="https://www.lloyds.com/market-resources" class="right-line">
                     Market resources
                 </a>
-                <div class="sub-menu wrap">
+                <button class="expand bottom-line">+</button>
+                <div class="sub-menu wrap hidden">
                     <h4>Market resources</h4>
                     <ul>
                         <li><a href="https://www.lloyds.com/market-resources/capital-and-reserving">Capital and reserving</a></li>
@@ -122,10 +134,11 @@
                 </div>
             </div>
             <div class="inactive">
-                <a href="https://www.lloyds.com/tools-and-systems" class="inactive">
+                <a href="https://www.lloyds.com/tools-and-systems" class="right-line">
                     Tools and systems
                 </a>
-                <div class="sub-menu wrap">
+                <button class="expand bottom-line">+</button>
+                <div class="sub-menu wrap hidden">
                     <h4>Tools and systems</h4>
                     <ul>
                         <li><a href="https://www.lloyds.com/market-resources/delegated-authorities/systems-and-tools/aims">AiMS</a></li>
@@ -149,10 +162,11 @@
                 </div>
             </div>
             <div class="inactive">
-                <a href="https://www.lloyds.com/lloyds-around-the-world" class="inactive">
+                <a href="https://www.lloyds.com/lloyds-around-the-world">
                     Lloyd's around the world
                 </a>
-                <div class="sub-menu column">
+                <button class="expand">+</button>
+                <div class="sub-menu column hidden">
                     <h4>Lloyd's around the world</h4>
                     <ul>
                         <li>
@@ -319,19 +333,19 @@
     <footer>
         <div id="footer-links">
             <ul>
-                <li>
+                <li class="right-line">
                     <a href="https://www.lloyds.com/common/privacy-notices">Privacy</a>
                 </li>
-                <li class="left-space">
+                <li class="right-line left-space">
                     <a href="https://www.lloyds.com/common/cookies-policy">Cookies</a>
                 </li>
-                <li class="left-space">
-                    <a href="https://www.lloyds.com/common/terms-and-conditions">Terms &amp; Conditions</a>
+                <li class="right-line left-space">
+                    <a href="https://www.lloyds.com/common/terms-and-conditions">Terms&nbsp;&amp;&nbsp;Conditions</a>
                 </li>
-                <li class="left-space">
-                    <a href="https://www.lloyds.com/modernslaverystatement">Modern Slavery App</a>
+                <li class="right-line left-space">
+                    <a href="https://www.lloyds.com/modernslaverystatement">Modern&nbsp;Slavery&nbsp;Act</a>
                 </li>
-                <li class="left-space">
+                <li class="right-line left-space">
                     <a href="https://www.lloyds.com/help-and-glossary">Help</a>
                 </li>
                 <li class="left-space">
@@ -340,18 +354,10 @@
             </ul>
         </div>
         <div id="media-icons">
-            <a href="https://twitter.com/LloydsofLondon">
-                <div class="twitter-icon icon"></div>
-            </a>
-            <a href="http://www.linkedin.com/company/lloyd%27s-of-london">
-                <div class="linkedin-icon icon"></div>
-            </a>
-            <a href="https://www.facebook.com/lloyds">
-                <div class="facebook-icon icon"></div>
-            </a>
-            <a href="http://www.youtube.com/user/Lloydsinsurance">
-                <div class="youtube-icon icon"></div>
-            </a>
+            <a href="https://twitter.com/LloydsofLondon" class="twitter-icon icon"></a>
+            <a href="http://www.linkedin.com/company/lloyd%27s-of-london" class="linkedin-icon icon"></a>
+            <a href="https://www.facebook.com/lloyds" class="facebook-icon icon"></a>
+            <a href="http://www.youtube.com/user/Lloydsinsurance" class="youtube-icon icon"></a>
         </div>
         <div class="copyright">
             <p>
