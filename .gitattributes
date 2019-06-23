@@ -1,1 +1,4 @@
 src/styles/css/* linguist-vendored
+src/styles/scss/partials/_footer.scss linguist-vendored
+src/styles/scss/partials/_footer.resp.scss linguist-vendored
+src/styles/scss/index.scss linguist-vendored
