@@ -244,44 +244,49 @@ header {
                     }
 
                     &.column {
-                        ul {
-                            flex-direction: column;
-                            
-                            li {
-                                width: 25%;
+                        @media only screen and (min-width: 1024px) {
 
-                                &:hover {
-                                    .third-level-menu {
-                                    display: block;
+                            ul {
+                                flex-direction: column;
+                                
+                                li {
+                                    width: 25%;
+
+                                    &:hover {
+                                        .third-level-menu {
+                                        display: block;
+                                        }
                                     }
-                                }
 
-                                .third-level-menu {
-                                    display: none;
-                                    position: absolute;
-                                    left: 25%;
-                                    top: 69px;
-                                    width: 70%;
-                                    height: 100%;
+                                    .third-level-menu {
+                                        display: none;
+                                        position: absolute;
+                                        left: 25%;
+                                        top: 69px;
+                                        width: 70%;
+                                        height: 100%;
 
-                                    ul {
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                        flex-direction: row;
+                                        ul {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            flex-direction: row;
 
-                                        li {
-                                            width: 25%;
+                                            li {
+                                                width: 25%;
 
-                                            a {
-                                                &:hover {
-                                                    text-decoration: underline;
+                                                a {
+                                                    &:hover {
+                                                        text-decoration: underline;
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
+
                         }
+                        
                     }
                 }
 

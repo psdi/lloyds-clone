@@ -167,28 +167,29 @@ header {
             header #bottom-nav div .sub-menu.wrap ul li {
               width: 33%; }
               header #bottom-nav div .sub-menu.wrap ul li a:hover {
-                text-decoration: underline; }
-          header #bottom-nav div .sub-menu.column ul {
-            flex-direction: column; }
-            header #bottom-nav div .sub-menu.column ul li {
-              width: 25%; }
-              header #bottom-nav div .sub-menu.column ul li:hover .third-level-menu {
-                display: block; }
-              header #bottom-nav div .sub-menu.column ul li .third-level-menu {
-                display: none;
-                position: absolute;
-                left: 25%;
-                top: 69px;
-                width: 70%;
-                height: 100%; }
-                header #bottom-nav div .sub-menu.column ul li .third-level-menu ul {
-                  display: flex;
-                  flex-wrap: wrap;
-                  flex-direction: row; }
-                  header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li {
-                    width: 25%; }
-                    header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li a:hover {
-                      text-decoration: underline; } }
+                text-decoration: underline; } }
+@media only screen and (min-width: 1024px) and (min-width: 1024px) {
+  header #bottom-nav div .sub-menu.column ul {
+    flex-direction: column; }
+    header #bottom-nav div .sub-menu.column ul li {
+      width: 25%; }
+      header #bottom-nav div .sub-menu.column ul li:hover .third-level-menu {
+        display: block; }
+      header #bottom-nav div .sub-menu.column ul li .third-level-menu {
+        display: none;
+        position: absolute;
+        left: 25%;
+        top: 69px;
+        width: 70%;
+        height: 100%; }
+        header #bottom-nav div .sub-menu.column ul li .third-level-menu ul {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row; }
+          header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li {
+            width: 25%; }
+            header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li a:hover {
+              text-decoration: underline; } }
 
 @media only screen and (max-width: 1024px) {
   header {
@@ -301,7 +302,34 @@ header {
                   content: "\3009";
                   display: inline;
                   white-space: nowrap;
-                  padding: 0 8px 0 25px; } }
+                  padding: 0 8px 0 25px; }
+          header #bottom-nav div > .sub-menu.column > ul {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 30px solid #D6D9EF;
+            margin: 0; }
+            header #bottom-nav div > .sub-menu.column > ul li {
+              padding: 0;
+              border-top: 1px solid #ffffff; }
+              header #bottom-nav div > .sub-menu.column > ul li .trigger {
+                background-color: #D6D9EF;
+                display: block;
+                padding: 12px;
+                font-weight: bold; }
+              header #bottom-nav div > .sub-menu.column > ul li .third-level-menu ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column; }
+                header #bottom-nav div > .sub-menu.column > ul li .third-level-menu ul li {
+                  background-color: #DFE0E6; }
+                  header #bottom-nav div > .sub-menu.column > ul li .third-level-menu ul li a {
+                    display: block;
+                    padding: 12px; }
+                    header #bottom-nav div > .sub-menu.column > ul li .third-level-menu ul li a::before {
+                      content: "\3009";
+                      display: inline;
+                      white-space: nowrap;
+                      padding: 0 5px; } }
 @media only screen and (max-width: 570px) {
   #bottom-nav div > a {
     flex-basis: 90% !important; }
