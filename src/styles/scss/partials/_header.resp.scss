@@ -115,7 +115,7 @@
                     }
                 }
                 
-                & > #expand {
+                & > .expand {
                     box-sizing: border-box;
                     flex-basis: 5%;
                     min-width: 5%;
@@ -136,7 +136,7 @@
                     }
                 }
 
-                & > .a {
+                & > .sub-menu {
                     width: 100%;
                     display: block;
                     flex-basis: 100%;
@@ -146,13 +146,31 @@
                         display: none;
                     }
 
-                    &.wrap, &.column {
+                    &.wrap {
                         ul {
                             flex-direction: column;
 
                             li {
-                                padding: 15px;
                                 border-bottom: 1px solid #ffffff;
+
+                                a {
+                                    padding: 5px;
+
+                                    &::before {
+                                        content: "\3009";
+                                        display: inline;
+                                        white-space: nowrap;
+                                        padding: 0 8px 0 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.column {
+                        ul {
+                            li {
+
                             }
                         }
                     }
@@ -170,7 +188,7 @@
                 flex-basis: 90% !important;
             }
             
-            & > #expand {
+            & > .expand {
                 flex-basis: 10% !important;
                 min-width: 10%;
                 text-align: left;

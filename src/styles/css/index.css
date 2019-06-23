@@ -127,7 +127,7 @@ header {
           background-color: #F1F1F1; }
         header #bottom-nav div:hover > .sub-menu {
           display: block; }
-        header #bottom-nav div #expand {
+        header #bottom-nav div .expand {
           display: none; } }
       header #bottom-nav div .sub-menu {
         display: none;
@@ -269,7 +269,7 @@ header {
           header #bottom-nav div > a.right-line {
             border-right: 0;
             border-bottom: 1px solid #ffffff; }
-        header #bottom-nav div > #expand {
+        header #bottom-nav div > .expand {
           box-sizing: border-box;
           flex-basis: 5%;
           min-width: 5%;
@@ -280,26 +280,32 @@ header {
           text-align: center;
           padding: 0;
           font-size: 23pt; }
-          header #bottom-nav div > #expand.bottom-line {
+          header #bottom-nav div > .expand.bottom-line {
             border-bottom: 1px solid #ffffff; }
-          header #bottom-nav div > #expand:hover {
+          header #bottom-nav div > .expand:hover {
             cursor: pointer; }
-        header #bottom-nav div > .a {
+        header #bottom-nav div > .sub-menu {
           width: 100%;
           display: block;
           flex-basis: 100%;
           background-color: #DFE0E6; }
-          header #bottom-nav div > .a h4 {
+          header #bottom-nav div > .sub-menu h4 {
             display: none; }
-          header #bottom-nav div > .a.wrap ul, header #bottom-nav div > .a.column ul {
+          header #bottom-nav div > .sub-menu.wrap ul {
             flex-direction: column; }
-            header #bottom-nav div > .a.wrap ul li, header #bottom-nav div > .a.column ul li {
-              padding: 15px;
-              border-bottom: 1px solid #ffffff; } }
+            header #bottom-nav div > .sub-menu.wrap ul li {
+              border-bottom: 1px solid #ffffff; }
+              header #bottom-nav div > .sub-menu.wrap ul li a {
+                padding: 5px; }
+                header #bottom-nav div > .sub-menu.wrap ul li a::before {
+                  content: "\3009";
+                  display: inline;
+                  white-space: nowrap;
+                  padding: 0 8px 0 25px; } }
 @media only screen and (max-width: 570px) {
   #bottom-nav div > a {
     flex-basis: 90% !important; }
-  #bottom-nav div > #expand {
+  #bottom-nav div > .expand {
     flex-basis: 10% !important;
     min-width: 10%;
     text-align: left; } }
