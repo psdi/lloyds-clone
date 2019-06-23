@@ -97,32 +97,36 @@ header {
     font-size: 9.5pt;
     letter-spacing: -0.5px;
     font-weight: bold;
-    height: 38px;
+    min-height: 38px;
     flex-basis: 100%;
     margin-top: 19px; }
     header #bottom-nav div {
-      width: 19.9%; }
+      width: 20%; }
       header #bottom-nav div > a {
         text-decoration: none;
         display: block;
         width: 100%;
         padding: 10px 0;
         text-align: center; }
-      header #bottom-nav div.inactive {
-        background-color: #282F54; }
-        header #bottom-nav div.inactive > a {
-          color: #ffffff; }
-      header #bottom-nav div.active {
-        background-color: #DFE0E6; }
-        header #bottom-nav div.active > a {
-          color: #282F54; }
-      header #bottom-nav div:hover > a {
-        text-decoration: underline;
-        color: #282F54;
-        text-decoration-color: #141414;
-        background-color: #F1F1F1; }
-      header #bottom-nav div:hover > .sub-menu {
-        display: block; }
+        header #bottom-nav div > a.right-line {
+          border-right: 1px solid #ffffff;
+          box-sizing: border-box; }
+      @media only screen and (min-width: 1024px) {
+        header #bottom-nav div.inactive {
+          background-color: #282F54; }
+          header #bottom-nav div.inactive > a {
+            color: #ffffff; }
+        header #bottom-nav div.active {
+          background-color: #DFE0E6; }
+          header #bottom-nav div.active > a {
+            color: #282F54; }
+        header #bottom-nav div:hover > a {
+          text-decoration: underline;
+          color: #282F54;
+          text-decoration-color: #141414;
+          background-color: #F1F1F1; }
+        header #bottom-nav div:hover > .sub-menu {
+          display: block; } }
       header #bottom-nav div .sub-menu {
         display: none;
         box-sizing: border-box;
@@ -153,35 +157,36 @@ header {
               display: block;
               color: #141414;
               text-decoration: none; }
-        header #bottom-nav div .sub-menu.wrap ul {
-          flex-wrap: wrap; }
-          header #bottom-nav div .sub-menu.wrap ul li {
-            width: 33%; }
-            header #bottom-nav div .sub-menu.wrap ul li a:hover {
-              text-decoration: underline; }
-        header #bottom-nav div .sub-menu.column ul {
-          flex-direction: column; }
-          header #bottom-nav div .sub-menu.column ul li {
-            width: 25%; }
-            header #bottom-nav div .sub-menu.column ul li:hover .third-level-menu {
-              display: block; }
-            header #bottom-nav div .sub-menu.column ul li .third-level-menu {
-              display: none;
-              position: absolute;
-              left: 25%;
-              top: 69px;
-              width: 70%;
-              height: 100%; }
-              header #bottom-nav div .sub-menu.column ul li .third-level-menu ul {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row; }
-                header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li {
-                  width: 25%; }
-                  header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li a:hover {
-                    text-decoration: underline; }
+        @media only screen and (min-width: 1024px) {
+          header #bottom-nav div .sub-menu.wrap ul {
+            flex-wrap: wrap; }
+            header #bottom-nav div .sub-menu.wrap ul li {
+              width: 33%; }
+              header #bottom-nav div .sub-menu.wrap ul li a:hover {
+                text-decoration: underline; }
+          header #bottom-nav div .sub-menu.column ul {
+            flex-direction: column; }
+            header #bottom-nav div .sub-menu.column ul li {
+              width: 25%; }
+              header #bottom-nav div .sub-menu.column ul li:hover .third-level-menu {
+                display: block; }
+              header #bottom-nav div .sub-menu.column ul li .third-level-menu {
+                display: none;
+                position: absolute;
+                left: 25%;
+                top: 69px;
+                width: 70%;
+                height: 100%; }
+                header #bottom-nav div .sub-menu.column ul li .third-level-menu ul {
+                  display: flex;
+                  flex-wrap: wrap;
+                  flex-direction: row; }
+                  header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li {
+                    width: 25%; }
+                    header #bottom-nav div .sub-menu.column ul li .third-level-menu ul li a:hover {
+                      text-decoration: underline; } }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1024px) {
   header {
     width: 100%;
     min-height: 100px;
@@ -215,9 +220,9 @@ header {
           background-position: center;
           background-size: 27px; }
     header #top-nav {
+      display: none;
       flex-basis: 100%;
-      min-height: 100px;
-      display: inline-block; }
+      min-height: 100px; }
       header #top-nav #links {
         padding: 0;
         margin: 0;
@@ -238,7 +243,26 @@ header {
             border-bottom: 1px solid #CCC9CC; }
     header #bottom-nav {
       flex-basis: 100%;
-      display: none; } }
+      flex-direction: column;
+      border-top: 0;
+      margin: 0; }
+      header #bottom-nav div {
+        width: 100%;
+        background-color: #282F54; }
+        header #bottom-nav div.highlight {
+          background-color: #DFE0E6; }
+          header #bottom-nav div.highlight > a {
+            color: #282F54; }
+        header #bottom-nav div > a {
+          color: white;
+          text-align: left;
+          padding: 15px; }
+          header #bottom-nav div > a.right-line {
+            border-right: 0;
+            border-bottom: 1px solid #ffffff; }
+        header #bottom-nav div .sub-menu {
+          width: 100%;
+          position: absolute; } }
 main section > * {
   width: 980px;
   margin-left: auto;
@@ -361,7 +385,7 @@ main #page-text {
         letter-spacing: -0.5px;
         margin-top: -3px; }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1024px) {
   main {
     width: 100%;
     box-sizing: border-box; }

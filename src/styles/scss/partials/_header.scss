@@ -131,12 +131,12 @@ header {
         font-size: 9.5pt;
         letter-spacing: -0.5px;
         font-weight: bold;
-        height: 38px;
+        min-height: 38px;
         flex-basis: 100%;
         margin-top: 19px;
 
         div {
-            width: 19.9%;
+            width: 20%;
 
             & > a {
                 text-decoration: none;
@@ -144,32 +144,39 @@ header {
                 width: 100%;
                 padding: 10px 0;
                 text-align: center;
-            }
 
-            &.inactive {
-                background-color: #282F54;
-                & > a {
-                    color: #ffffff;
+                &.right-line {
+                    border-right: 1px solid #ffffff;
+                    box-sizing: border-box;
                 }
             }
 
-            &.active {
-                background-color: #DFE0E6;
-                & > a {
-                    color: #282F54;
+            @media only screen and (min-width: 1024px) {
+                &.inactive {
+                    background-color: #282F54;
+                    & > a {
+                        color: #ffffff;
+                    }
                 }
-            }
-
-            &:hover {
-                & > a {
-                    text-decoration: underline;
-                    color: #282F54;
-                    text-decoration-color: #141414;
-                    background-color: #F1F1F1;
+    
+                &.active {
+                    background-color: #DFE0E6;
+                    & > a {
+                        color: #282F54;
+                    }
                 }
 
-                & > .sub-menu {
-                    display: block;
+                &:hover {
+                    & > a {
+                        text-decoration: underline;
+                        color: #282F54;
+                        text-decoration-color: #141414;
+                        background-color: #F1F1F1;
+                    }
+    
+                    & > .sub-menu {
+                        display: block;
+                    }
                 }
             }
 
@@ -212,52 +219,55 @@ header {
                     }
                 }
 
-                &.wrap {
-                    ul {
-                        flex-wrap: wrap;
-                        li {
-                            width: 33%;
-                            a {
-                                &:hover {
-                                    text-decoration: underline;
+                @media only screen and (min-width: 1024px) {
+
+                    &.wrap {
+                        ul {
+                            flex-wrap: wrap;
+                            li {
+                                width: 33%;
+                                a {
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                &.column {
-                    ul {
-                        flex-direction: column;
-                        
-                        li {
-                            width: 25%;
+                    &.column {
+                        ul {
+                            flex-direction: column;
+                            
+                            li {
+                                width: 25%;
 
-                            &:hover {
-                                .third-level-menu {
-                                   display: block;
+                                &:hover {
+                                    .third-level-menu {
+                                    display: block;
+                                    }
                                 }
-                            }
 
-                            .third-level-menu {
-                                display: none;
-                                position: absolute;
-                                left: 25%;
-                                top: 69px;
-                                width: 70%;
-                                height: 100%;
+                                .third-level-menu {
+                                    display: none;
+                                    position: absolute;
+                                    left: 25%;
+                                    top: 69px;
+                                    width: 70%;
+                                    height: 100%;
 
-                                ul {
-                                    display: flex;
-                                    flex-wrap: wrap;
-                                    flex-direction: row;
+                                    ul {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        flex-direction: row;
 
-                                    li {
-                                        width: 25%;
+                                        li {
+                                            width: 25%;
 
-                                        a {
-                                            &:hover {
-                                                text-decoration: underline;
+                                            a {
+                                                &:hover {
+                                                    text-decoration: underline;
+                                                }
                                             }
                                         }
                                     }
@@ -266,6 +276,7 @@ header {
                         }
                     }
                 }
+
             }
         }
     }

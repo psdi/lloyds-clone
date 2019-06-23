@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1024px) {
     header {
         width: 100%;
         min-height: 100px;
@@ -49,9 +49,9 @@
         }
 
         #top-nav {
+            display: none; //temporary
             flex-basis: 100%;
             min-height: 100px;
-            display: inline-block;
             
             #links {
                 padding: 0;
@@ -84,7 +84,38 @@
 
         #bottom-nav {
             flex-basis: 100%;
-            display: none; //temporary
+            flex-direction: column;
+            border-top: 0;
+            margin: 0;
+
+            div {
+                width: 100%;
+                background-color: #282F54;
+
+                &.highlight {
+                    background-color: #DFE0E6;
+                    & > a {
+                        color: #282F54;
+                    }
+                }
+
+                & > a { 
+                    color: white;
+                    text-align: left;
+                    padding: 15px;
+                    
+                    &.right-line {
+                        border-right: 0;
+                        border-bottom: 1px solid #ffffff;
+                    }
+                }
+
+                .sub-menu {
+                    width: 100%;
+                    position: absolute;
+
+                }
+            }
         }
     }
 } 
