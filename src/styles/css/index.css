@@ -225,7 +225,6 @@ header {
           background-position: center;
           background-size: 27px; }
     header #top-nav {
-      display: none;
       flex-basis: 100%;
       min-height: 100px; }
       header #top-nav #links {
@@ -233,9 +232,9 @@ header {
         margin: 0;
         flex-direction: column; }
         header #top-nav #links li {
-          width: 100%;
           display: block; }
           header #top-nav #links li a {
+            box-sizing: border-box;
             display: block;
             padding: 10px;
             width: 100%;
@@ -257,10 +256,6 @@ header {
         background-color: #282F54;
         display: flex;
         flex-wrap: wrap; }
-        header #bottom-nav div.highlight {
-          background-color: #DFE0E6; }
-          header #bottom-nav div.highlight > a {
-            color: #282F54; }
         header #bottom-nav div > a {
           color: white;
           text-align: left;
@@ -270,6 +265,9 @@ header {
           header #bottom-nav div > a.right-line {
             border-right: 0;
             border-bottom: 1px solid #ffffff; }
+          header #bottom-nav div > a.highlight {
+            background-color: #DFE0E6;
+            color: #282F54; }
         header #bottom-nav div > .expand {
           box-sizing: border-box;
           flex-basis: 5%;
@@ -285,11 +283,22 @@ header {
             border-bottom: 1px solid #ffffff; }
           header #bottom-nav div > .expand:hover {
             cursor: pointer; }
+          header #bottom-nav div > .expand.highlight {
+            background-color: #DFE0E6;
+            color: #282F54; }
         header #bottom-nav div > .sub-menu {
           width: 100%;
-          display: block;
+          display: inline-block;
           flex-basis: 100%;
-          background-color: #DFE0E6; }
+          background-color: #DFE0E6;
+          max-height: 1800px;
+          transition: max-height 0.8s cubic-bezier(0.5, 0, 0.5, 1); }
+          header #bottom-nav div > .sub-menu.hidden {
+            max-height: 0;
+            overflow-y: hidden;
+            padding: 0;
+            margin: 0;
+            transition: max-height 0.8s cubic-bezier(0, 1, 0.5, 1); }
           header #bottom-nav div > .sub-menu h4 {
             display: none; }
           header #bottom-nav div > .sub-menu.wrap ul {

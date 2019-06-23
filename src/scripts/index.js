@@ -15,4 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
     searchBtn.addEventListener('click', function() {
         siteSearch.classList.toggle('closed');
     });
+
+    // Top and bottom navs in header area
+    const expandBtns = document.querySelectorAll('.expand');
+    expandBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            let tab = this.parentNode.children[0];
+            let submenu = this.parentNode.querySelector('.sub-menu');
+
+            if (tab.classList.contains('highlight') || this.classList.contains('highlight')) {
+                this.innerHTML = '+';
+            } else {
+                this.innerHTML = '&times;';
+            }
+
+            submenu.classList.toggle('hidden');
+            tab.classList.toggle('highlight');
+            this.classList.toggle('highlight');
+        });
+    });
 });
