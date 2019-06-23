@@ -526,7 +526,6 @@ footer {
   background-color: #141414;
   color: #FAFAFA;
   font-size: 10.25pt;
-  margin: 0;
   padding: 25px 0 15px;
   letter-spacing: 0.1px; }
   footer > div {
@@ -556,24 +555,23 @@ footer {
     justify-content: flex-start; }
     footer #media-icons a {
       margin: 0 -6px;
-      padding: 0; }
+      background-repeat: no-repeat; }
     footer #media-icons .icon {
       height: 35px;
       width: 35px;
       margin-right: 15px; }
     footer #media-icons .twitter-icon {
-      background: url("../../icons/twitter.svg") no-repeat; }
+      background: url("../../icons/twitter.svg"); }
     footer #media-icons .linkedin-icon {
-      background: url("../../icons/linkedin.svg") no-repeat; }
+      background: url("../../icons/linkedin.svg"); }
     footer #media-icons .facebook-icon {
-      background: url("../../icons/facebook.svg") no-repeat; }
+      background: url("../../icons/facebook.svg"); }
     footer #media-icons .youtube-icon {
-      background: url("../../icons/youtube.svg") no-repeat; }
+      background: url("../../icons/youtube.svg"); }
 
 @media only screen and (max-width: 1024px) {
   footer {
     box-sizing: border-box;
-    position: relative;
     padding: 30px 15px 5px; }
     footer > div {
       margin: 0;
