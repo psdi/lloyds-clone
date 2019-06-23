@@ -34,4 +34,21 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('highlight');
         });
     });
+
+    function initializeMenuBtn() {
+        const menuBtn = document.querySelector('#menu-btn');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', function() {
+                const newMenu = document.querySelector('#newMenu');
+                if (newMenu) {
+                    newMenu.classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    window.onresize = _.debounce(initializeMenuBtn, 300);
+
+    initializeMenuBtn();
+    
 });

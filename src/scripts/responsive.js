@@ -1,23 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    const header = document.querySelector('header');
+    const topNav = document.querySelector('#top-nav');
+    const bottomNav = document.querySelector('#bottom-nav');
     const siteSearch = document.querySelector('#site-search');
+    
     const BREAKPOINT = 1020;
-    let mobile = false;
+
+    function createNewMenu() {
+        let menu = document.createElement('div');
+        menu.appendChild(bottomNav);
+        menu.appendChild(topNav);
+        menu.setAttribute('id', 'newMenu');
+        menu.classList.add('hidden');
+        return menu;
+    }
+
+    function isMobile() {
+        return window.innerWidth <= BREAKPOINT;
+    }
 
     function adjustHeader() {
-        if (window.innerWidth <= BREAKPOINT) {
-            siteSearch.classList.add('closed');
+        mobile = isMobile();
 
-            mobile = true;
+        if (mobile) {
+            if (!document.querySelector('#newMenu')) {
+                let newMenu = createNewMenu();
+                if (document.querySelector('#top-nav') && document.querySelector('#bottom-nav')) {
+                    header.removeChild(topNav);
+                    header.removeChild(bottomNav);
+                }
+                header.appendChild(newMenu);
+            }
         } else {
-            if (mobile === true) {
-                //todo
+            if (document.querySelector('#newMenu')) {
+                let menu = document.querySelector('#newMenu');
+                header.removeChild(menu);
+                header.insertBefore(topNav, siteSearch);
+                header.appendChild(bottomNav);
             }
         }
     }
 
     // Listener
-    window.onresize = _.debounce(adjustHeader, 300);
+    window.onresize = _.debounce(adjustHeader, 10);
 
     adjustHeader();
 
