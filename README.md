@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project serves as a clone of [this website](https://www.lloyds.com/news-and-risk-insight/risk-reports/library/technology/taking-control) as a requirement for the Chingu Voyage 10 Pre-work.
+This project serves as a clone of [this webpage](https://www.lloyds.com/news-and-risk-insight/risk-reports/library/technology/taking-control) as a requirement for the Chingu Voyage 10 Pre-work.
 
 **Disclaimer**: I do not take credit for the layout, as the design is not original but rather only a clone. The images used are also not my property; credit goes once again to Lloyd's. However, I claim that I wrote my own code basing it off the site design without looking into the actual source code.
 
@@ -32,4 +32,4 @@ This project serves as a clone of [this website](https://www.lloyds.com/news-and
 
 
 
-*Implementation (especially on the expanding menus) doesn't run as smoothly as original.
+*Implementation (especially on the expanding menus) doesn't run as smoothly as the original.
