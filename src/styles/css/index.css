@@ -194,7 +194,7 @@ header {
 @media only screen and (max-width: 1024px) {
   header {
     width: 100%;
-    min-height: 100px;
+    min-height: 65px;
     box-sizing: border-box; }
     header > * {
       box-sizing: border-box;
@@ -203,12 +203,15 @@ header {
       flex-basis: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 0 14px; }
+      padding: 0 14px;
+      margin-bottom: 10px; }
       header #icon-container #symbol-group {
         display: block; }
     header #site-search {
       flex-basis: 100%;
       max-height: 50px;
+      padding: 0;
+      margin: 0;
       transition: max-height 0.8s cubic-bezier(0, 1, 0.5, 1); }
       header #site-search.closed {
         max-height: 0;
@@ -255,7 +258,8 @@ header {
         width: 100%;
         background-color: #282F54;
         display: flex;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+        z-index: 4; }
         header #bottom-nav div > a {
           color: white;
           text-align: left;
@@ -287,12 +291,13 @@ header {
             background-color: #DFE0E6;
             color: #282F54; }
         header #bottom-nav div > .sub-menu {
+          z-index: 2;
           width: 100%;
           display: inline-block;
           flex-basis: 100%;
           background-color: #DFE0E6;
           max-height: 1800px;
-          transition: max-height 0.8s cubic-bezier(0.5, 0, 0.5, 1); }
+          transition: max-height 1.1s cubic-bezier(0.5, 0, 0.5, 1); }
           header #bottom-nav div > .sub-menu.hidden {
             max-height: 0;
             overflow-y: hidden;
@@ -338,7 +343,15 @@ header {
                       content: "\3009";
                       display: inline;
                       white-space: nowrap;
-                      padding: 0 5px; } }
+                      padding: 0 5px; }
+    header #newMenu {
+      z-index: 5;
+      max-height: 2500px;
+      transition: max-height 1.7s cubic-bezier(0.5, 0, 0.5, 1); }
+      header #newMenu.hidden {
+        max-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.6s cubic-bezier(0.5, 0, 0.5, 1); } }
 @media only screen and (max-width: 570px) {
   #bottom-nav div > a {
     flex-basis: 90% !important; }
@@ -346,127 +359,129 @@ header {
     flex-basis: 10% !important;
     min-width: 10%;
     text-align: left; } }
-main section > * {
-  width: 980px;
-  margin-left: auto;
-  margin-right: auto; }
-main #page-headline {
-  background-color: #F1F1F1; }
-  main #page-headline #level-links {
-    padding-top: 30px; }
-    main #page-headline #level-links span {
-      font-size: 11pt;
+main {
+  z-index: 6; }
+  main section > * {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto; }
+  main #page-headline {
+    background-color: #F1F1F1; }
+    main #page-headline #level-links {
+      padding-top: 30px; }
+      main #page-headline #level-links span {
+        font-size: 11pt;
+        letter-spacing: -0.3px; }
+        main #page-headline #level-links span.level a {
+          color: #909090;
+          text-decoration: none; }
+        main #page-headline #level-links span.delimiter {
+          font-size: 10pt;
+          padding: 0 10px; }
+    main #page-headline #title-text {
+      color: #262626;
+      font-size: 23.5pt;
+      letter-spacing: -2px; }
+    main #page-headline #subtitle {
+      margin-top: -19px;
+      font-size: 10pt;
       letter-spacing: -0.3px; }
-      main #page-headline #level-links span.level a {
-        color: #909090;
-        text-decoration: none; }
-      main #page-headline #level-links span.delimiter {
-        font-size: 10pt;
-        padding: 0 10px; }
-  main #page-headline #title-text {
-    color: #262626;
-    font-size: 23.5pt;
-    letter-spacing: -2px; }
-  main #page-headline #subtitle {
-    margin-top: -19px;
-    font-size: 10pt;
-    letter-spacing: -0.3px; }
-  main #page-headline #social-media {
-    padding-bottom: 5px; }
-    main #page-headline #social-media #share-button {
-      display: flex;
-      width: 150px;
-      cursor: pointer;
-      transition: all 0.1s; }
-      main #page-headline #social-media #share-button.dark {
-        background-color: #2B2B2B; }
-        main #page-headline #social-media #share-button.dark #share-symbol {
-          background: url("../../icons/icon-share-white.svg") no-repeat; }
-        main #page-headline #social-media #share-button.dark #share-text {
-          color: #ffffff; }
-      main #page-headline #social-media #share-button #share-symbol {
-        background: url("../../icons/icon-share-blue.svg") no-repeat;
-        background-position: center;
-        background-size: 16px;
-        height: 16px;
-        width: 16px;
-        margin: 14px 0 1px 14px; }
-      main #page-headline #social-media #share-button #share-text {
-        margin: 12px 0 3px;
-        color: #0C4AB5;
-        font-size: 11.25pt;
-        font-weight: bold;
-        margin-left: 10px; }
-    main #page-headline #social-media #media-icons {
-      max-height: 50px;
-      transition: max-height 0.1s cubic-bezier(0, 1, 0.5, 1);
-      background-color: #2B2B2B;
-      margin-bottom: 35px;
-      padding: 10px 5px 1px 0;
-      display: inline-block; }
-      main #page-headline #social-media #media-icons.closed {
-        margin: 0;
-        padding: 0;
-        max-height: 0;
-        overflow-y: hidden; }
-      main #page-headline #social-media #media-icons #icon-container {
+    main #page-headline #social-media {
+      padding-bottom: 5px; }
+      main #page-headline #social-media #share-button {
         display: flex;
-        flex-direction: row;
-        height: 50px; }
-        main #page-headline #social-media #media-icons #icon-container a {
-          height: 35px;
-          width: 35px;
-          margin: 0 9px 0 0;
+        width: 150px;
+        cursor: pointer;
+        transition: all 0.1s; }
+        main #page-headline #social-media #share-button.dark {
+          background-color: #2B2B2B; }
+          main #page-headline #social-media #share-button.dark #share-symbol {
+            background: url("../../icons/icon-share-white.svg") no-repeat; }
+          main #page-headline #social-media #share-button.dark #share-text {
+            color: #ffffff; }
+        main #page-headline #social-media #share-button #share-symbol {
+          background: url("../../icons/icon-share-blue.svg") no-repeat;
+          background-position: center;
+          background-size: 16px;
+          height: 16px;
+          width: 16px;
+          margin: 14px 0 1px 14px; }
+        main #page-headline #social-media #share-button #share-text {
+          margin: 12px 0 3px;
+          color: #0C4AB5;
+          font-size: 11.25pt;
+          font-weight: bold;
+          margin-left: 10px; }
+      main #page-headline #social-media #media-icons {
+        max-height: 50px;
+        transition: max-height 0.1s cubic-bezier(0, 1, 0.5, 1);
+        background-color: #2B2B2B;
+        margin-bottom: 35px;
+        padding: 10px 5px 1px 0;
+        display: inline-block; }
+        main #page-headline #social-media #media-icons.closed {
+          margin: 0;
           padding: 0;
-          display: inline-block; }
-          main #page-headline #social-media #media-icons #icon-container a div {
+          max-height: 0;
+          overflow-y: hidden; }
+        main #page-headline #social-media #media-icons #icon-container {
+          display: flex;
+          flex-direction: row;
+          height: 50px; }
+          main #page-headline #social-media #media-icons #icon-container a {
             height: 35px;
             width: 35px;
-            margin: 0 4.5px; }
-      main #page-headline #social-media #media-icons .twitter-icon {
-        background: url("../../icons/twitter.svg") no-repeat; }
-      main #page-headline #social-media #media-icons .linkedin-icon {
-        background: url("../../icons/linkedin.svg") no-repeat; }
-      main #page-headline #social-media #media-icons .facebook-icon {
-        background: url("../../icons/facebook.svg") no-repeat; }
-      main #page-headline #social-media #media-icons .mail-icon {
-        background: url("../../icons/email.svg") no-repeat; }
-main #page-text {
-  width: 980px;
-  margin-left: auto;
-  margin-right: auto; }
-  main #page-text p {
-    font-size: 10.5pt;
-    letter-spacing: -0.2px;
-    line-height: 21px; }
-  main #page-text .report {
-    margin: 20px 0 45px;
-    display: flex;
-    flex-direction: row; }
-    main #page-text .report .report-cover {
-      max-width: 207px;
-      margin: 20px 38px 20px 20px;
-      box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.8); }
-    main #page-text .report .description {
-      width: 585px; }
-      main #page-text .report .description h2 {
-        letter-spacing: -1.6px;
-        font-size: 17.5pt;
-        min-height: 15px;
-        margin-bottom: 0;
-        padding-bottom: 0; }
-      main #page-text .report .description .no-margin {
-        margin-top: 0;
-        padding-top: 0; }
-      main #page-text .report .description a {
-        background-color: #0C4AB5;
-        color: #FFFFFF;
-        text-decoration: none;
-        padding: 17px;
-        display: inline-block;
-        font-size: 10.75pt;
-        letter-spacing: -0.5px;
-        margin-top: -3px; }
+            margin: 0 9px 0 0;
+            padding: 0;
+            display: inline-block; }
+            main #page-headline #social-media #media-icons #icon-container a div {
+              height: 35px;
+              width: 35px;
+              margin: 0 4.5px; }
+        main #page-headline #social-media #media-icons .twitter-icon {
+          background: url("../../icons/twitter.svg") no-repeat; }
+        main #page-headline #social-media #media-icons .linkedin-icon {
+          background: url("../../icons/linkedin.svg") no-repeat; }
+        main #page-headline #social-media #media-icons .facebook-icon {
+          background: url("../../icons/facebook.svg") no-repeat; }
+        main #page-headline #social-media #media-icons .mail-icon {
+          background: url("../../icons/email.svg") no-repeat; }
+  main #page-text {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto; }
+    main #page-text p {
+      font-size: 10.5pt;
+      letter-spacing: -0.2px;
+      line-height: 21px; }
+    main #page-text .report {
+      margin: 20px 0 45px;
+      display: flex;
+      flex-direction: row; }
+      main #page-text .report .report-cover {
+        max-width: 207px;
+        margin: 20px 38px 20px 20px;
+        box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.8); }
+      main #page-text .report .description {
+        width: 585px; }
+        main #page-text .report .description h2 {
+          letter-spacing: -1.6px;
+          font-size: 17.5pt;
+          min-height: 15px;
+          margin-bottom: 0;
+          padding-bottom: 0; }
+        main #page-text .report .description .no-margin {
+          margin-top: 0;
+          padding-top: 0; }
+        main #page-text .report .description a {
+          background-color: #0C4AB5;
+          color: #FFFFFF;
+          text-decoration: none;
+          padding: 17px;
+          display: inline-block;
+          font-size: 10.75pt;
+          letter-spacing: -0.5px;
+          margin-top: -3px; }
 
 @media only screen and (max-width: 1024px) {
   main {

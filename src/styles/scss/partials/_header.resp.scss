@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1024px) {
     header {
         width: 100%;
-        min-height: 100px;
+        min-height: 65px;
         box-sizing: border-box;
 
         & > * {
@@ -14,6 +14,7 @@
             display: flex;
             justify-content: space-between;
             padding: 0 14px;
+            margin-bottom: 10px;
 
             #symbol-group {
                 display: block;
@@ -23,6 +24,8 @@
         #site-search {
             flex-basis: 100%;
             max-height: 50px;
+            padding: 0;
+            margin: 0;
             transition: max-height 0.8s cubic-bezier(0, 1, 0.5, 1);
 
             &.closed {
@@ -93,6 +96,7 @@
                 background-color: #282F54;
                 display: flex;
                 flex-wrap: wrap;
+                z-index: 4;
 
                 & > a { 
                     color: white;
@@ -139,13 +143,13 @@
                 }
 
                 & > .sub-menu {
+                    z-index: 2;
                     width: 100%;
                     display: inline-block;
                     flex-basis: 100%;
                     background-color: #DFE0E6;
                     max-height: 1800px;
-                    // transition: max-height 2s cubic-bezier(0, 1, 0.5, 1);
-                    transition: max-height 0.8s cubic-bezier(0.5, 0, 0.5, 1);
+                    transition: max-height 1.1s cubic-bezier(0.5, 0, 0.5, 1);
 
                     &.hidden {
                         max-height: 0;
@@ -227,6 +231,18 @@
                     }
 
                 }
+            }
+        }
+
+        #newMenu {
+            z-index: 5;
+            max-height: 2500px;
+            transition: max-height 1.7s cubic-bezier(0.5, 0, 0.5, 1);
+
+            &.hidden {
+                max-height: 0;
+                overflow-y: hidden;
+                transition: max-height 0.6s cubic-bezier(0.5, 0, 0.5, 1);
             }
         }
     }

@@ -5,9 +5,9 @@ body {
     padding: 0;
 }
 
-@import "partials/header.scss";
-@import "partials/header.resp.scss";
-@import "partials/main.scss";
-@import "partials/main.resp.scss";
-@import "partials/footer.scss";
-@import "partials/footer.resp.scss";
+@import "partials/header";
+@import "partials/header.resp";
+@import "partials/main";
+@import "partials/main.resp";
+@import "partials/footer";
+@import "partials/footer.resp";
