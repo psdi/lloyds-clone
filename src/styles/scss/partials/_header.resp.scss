@@ -252,13 +252,13 @@
     #bottom-nav {
         div {
             & > a { 
-                flex-basis: 90% !important;
+                flex-basis: 85% !important;
             }
             
             & > .expand {
-                flex-basis: 10% !important;
-                min-width: 10%;
-                text-align: left;
+                flex-basis: 15% !important;
+                // min-width: 10%;
+                text-align: right;
             }
         }
     }
