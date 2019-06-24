@@ -362,8 +362,8 @@ header {
     #bottom-nav div > .expand {
       padding-top: 1px !important;
       box-sizing: border-box;
-      flex-basis: 14.5% !important;
-      width: 14.5% !important;
+      flex-basis: 14% !important;
+      width: 14% !important;
       text-align: right; } }
 main {
   z-index: 6; }
