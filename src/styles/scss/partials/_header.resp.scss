@@ -252,10 +252,11 @@
     #bottom-nav {
         div {
             & > a { 
-                flex-basis: 83% !important;
+                flex-basis: 83.5% !important;
             }
             
             & > .expand {
+                padding: 0;
                 box-sizing: border-box;
                 flex-basis: 15% !important;
                 text-align: right;

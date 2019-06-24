@@ -354,8 +354,9 @@ header {
         transition: max-height 0.6s cubic-bezier(0.5, 0, 0.5, 1); } }
 @media only screen and (max-width: 570px) {
   #bottom-nav div > a {
-    flex-basis: 83% !important; }
+    flex-basis: 83.5% !important; }
   #bottom-nav div > .expand {
+    padding: 0;
     box-sizing: border-box;
     flex-basis: 15% !important;
     text-align: right; } }
