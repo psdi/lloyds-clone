@@ -353,13 +353,14 @@ header {
         overflow-y: hidden;
         transition: max-height 0.6s cubic-bezier(0.5, 0, 0.5, 1); } }
 @media only screen and (max-width: 570px) {
-  #bottom-nav div > a {
-    width: 83.5% !important;
-    flex-basis: 83.5% !important; }
-  #bottom-nav div > .expand {
-    padding-top: 1px !important;
-    flex-basis: 14% !important;
-    text-align: right; } }
+  #bottom-nav div {
+    box-sizing: border-box; }
+    #bottom-nav div > a {
+      flex-basis: 83.5% !important; }
+    #bottom-nav div > .expand {
+      padding-top: 1px !important;
+      flex-basis: 14% !important;
+      text-align: right; } }
 main {
   z-index: 6; }
   main section > * {

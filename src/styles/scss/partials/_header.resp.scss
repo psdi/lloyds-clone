@@ -251,8 +251,9 @@
 @media only screen and (max-width: 570px) {
     #bottom-nav {
         div {
-            & > a {
-                width: 83.5% !important;
+            box-sizing: border-box;
+
+            & > a { 
                 flex-basis: 83.5% !important;
             }
             
