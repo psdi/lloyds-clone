@@ -260,6 +260,9 @@ header {
         display: flex;
         flex-wrap: wrap;
         z-index: 4; }
+        header #bottom-nav div.highlight {
+          background-color: #DFE0E6;
+          color: #282F54; }
         header #bottom-nav div > a {
           color: white;
           text-align: left;

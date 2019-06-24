@@ -98,6 +98,11 @@
                 flex-wrap: wrap;
                 z-index: 4;
 
+                &.highlight {
+                    background-color: #DFE0E6;
+                    color: #282F54;
+                }
+
                 & > a { 
                     color: white;
                     text-align: left;

@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const expandBtns = document.querySelectorAll('.expand');
     expandBtns.forEach(function(btn) {
         btn.addEventListener('click', function() {
+            let container = this.parentNode;
             let tab = this.parentNode.children[0];
             let submenu = this.parentNode.querySelector('.sub-menu');
 
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             submenu.classList.toggle('hidden');
+            container.classList.toggle('highlight');
             tab.classList.toggle('highlight');
             this.classList.toggle('highlight');
         });
