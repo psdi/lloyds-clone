@@ -356,6 +356,7 @@ header {
   #bottom-nav div > a {
     flex-basis: 83% !important; }
   #bottom-nav div > .expand {
+    box-sizing: border-box;
     flex-basis: 15% !important;
     text-align: right; } }
 main {
