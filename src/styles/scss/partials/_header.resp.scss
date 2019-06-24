@@ -257,14 +257,12 @@
             & > a {
                 width: 85% !important;
                 flex-basis: 85% !important;
-                border-bottom: 0;
             }
             
             & > .expand {
-                padding: 0;
+                padding-top: 1px !important;
                 box-sizing: border-box;
                 flex-basis: 15% !important;
-                border-bottom: 0;
                 text-align: right;
             }
         }
